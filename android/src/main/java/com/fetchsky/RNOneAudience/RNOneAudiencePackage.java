@@ -1,5 +1,5 @@
 
-package com.fetchsky;
+package com.fetchsky.RNOneAudience;
 
 import java.util.Arrays;
 import java.util.Collections;

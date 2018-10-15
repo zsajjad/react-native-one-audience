@@ -1,5 +1,5 @@
 
-package com.fetchsky;
+package com.fetchsky.RNOneAudience;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
