@@ -6,6 +6,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
+import com.facebook.react.bridge.ReadableMap;
 import com.oneaudience.sdk.OneAudience;
 
 public class RNOneAudienceModule extends ReactContextBaseJavaModule {
@@ -18,9 +19,9 @@ public class RNOneAudienceModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void init(String apiKey, Promise promise) {
+    public void init(ReadableMap options, Promise promise) {
         try {
-          OneAudience.init(this.getCurrentActivity(), apiKey, true);
+          OneAudience.init(this.getCurrentActivity(), options.getString("apiKey"), options.getBoolean("getPermissions"));
           promise.resolve(true);
         } catch (Exception e) {
             e.printStackTrace();
